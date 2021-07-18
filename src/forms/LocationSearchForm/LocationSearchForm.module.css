@@ -61,7 +61,7 @@
   margin-top: 16px;
   margin-bottom: 102px;
 
-  @media (--viewportXLarge) {
+  @media (--viewportXXLarge) {
     margin-bottom: 0;
   }
 }

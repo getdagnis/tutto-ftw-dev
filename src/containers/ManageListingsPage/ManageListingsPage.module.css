@@ -95,7 +95,7 @@
     margin-right: 24px;
   }
 
-  @media (--viewportXLarge) {
+  @media (--viewportXXLarge) {
     /**
      * resultPanelWidthRatio = 0.625 aka 62.5%
      *
@@ -128,7 +128,7 @@
 }
 
 .listingCard:nth-of-type(3n) {
-  @media (--viewportXLarge) {
+  @media (--viewportXXLarge) {
     margin-right: 0;
   }
 }

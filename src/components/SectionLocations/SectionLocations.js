@@ -8,9 +8,14 @@ import { NamedLink } from '../../components';
 
 import css from './SectionLocations.module.css';
 
-import helsinkiImage from './images/location_helsinki.jpg';
-import rovaniemiImage from './images/location_rovaniemi.jpg';
-import rukaImage from './images/location_ruka.jpg';
+import trailerImage from './images/img_trailer.jpg';
+import bikerackImage from './images/img_bikerack.jpg';
+import tourismImage from './images/img_tourism2.jpg';
+import sportsImage from './images/img_kayak.jpg';
+import toolsImage from './images/img_grinder.jpg';
+import audioImage from './images/img_audio.jpg';
+import photoImage from './images/img_photo.jpg';
+import computerImage from './images/img_imac.jpg';
 
 class LocationImage extends Component {
   render() {
@@ -29,12 +34,7 @@ const locationLink = (name, image, searchQuery) => {
           <LazyImage src={image} alt={name} className={css.locationImage} />
         </div>
       </div>
-      <div className={css.linkText}>
-        <FormattedMessage
-          id="SectionLocations.listingsInLocation"
-          values={{ location: nameText }}
-        />
-      </div>
+      <div className={css.linkText}>{nameText}</div>
     </NamedLink>
   );
 };
@@ -45,24 +45,49 @@ const SectionLocations = props => {
   const classes = classNames(rootClassName || css.root, className);
 
   return (
-    <div className={classes}>
-      <div className={css.title}>
-        <FormattedMessage id="SectionLocations.title" />
+    <div className={css.root}>
+      <div className={css.subtitle}>
+        <FormattedMessage id="SectionLocations.subtitle" />
       </div>
       <div className={css.locations}>
         {locationLink(
-          'Helsinki',
-          helsinkiImage,
+          'Auto piekabes',
+          trailerImage,
           '?address=Helsinki%2C%20Finland&bounds=60.2978389%2C25.254484899999966%2C59.9224887%2C24.782875800000056&origin=60.16985569999999%2C24.93837910000002'
         )}
         {locationLink(
-          'Rovaniemi',
-          rovaniemiImage,
+          'Auto bagāžnieki',
+          bikerackImage,
           '?address=Rovaniemi%2C%20Finland&bounds=67.18452510000002%2C27.32667850000007%2C66.1553745%2C24.736871199999996&origin=66.50394779999999%2C25.729390599999988'
         )}
         {locationLink(
-          'Ruka',
-          rukaImage,
+          'Tūrisma inventārs',
+          tourismImage,
+          '?address=Ruka%2C%20Finland&bounds=66.1704578%2C29.14246849999995%2C66.1614402%2C29.110453699999994&origin=66.16594940000002%2C29.12646110000003'
+        )}
+        {locationLink(
+          'Sports un aktīvā atpūta',
+          sportsImage,
+          '?address=Ruka%2C%20Finland&b ounds=66.1704578%2C29.14246849999995%2C66.1614402%2C29.110453699999994&origin=66.16594940000002%2C29.12646110000003'
+        )}
+        {locationLink(
+          'Celtniecības instrumenti',
+          toolsImage,
+          '?address=Helsinki%2C%20Finland&bounds=60.2978389%2C25.254484899999966%2C59.9224887%2C24.782875800000056&origin=60.16985569999999%2C24.93837910000002'
+        )}
+        {locationLink(
+          'Audio un mūzikas aprīkojums',
+          audioImage,
+          '?address=Rovaniemi%2C%20Finland&bounds=67.18452510000002%2C27.32667850000007%2C66.1553745%2C24.736871199999996&origin=66.50394779999999%2C25.729390599999988'
+        )}
+        {locationLink(
+          'Foto un video tehnika',
+          photoImage,
+          '?address=Ruka%2C%20Finland&bounds=66.1704578%2C29.14246849999995%2C66.1614402%2C29.110453699999994&origin=66.16594940000002%2C29.12646110000003'
+        )}
+        {locationLink(
+          'Datori un elektronika',
+          computerImage,
           '?address=Ruka%2C%20Finland&bounds=66.1704578%2C29.14246849999995%2C66.1614402%2C29.110453699999994&origin=66.16594940000002%2C29.12646110000003'
         )}
       </div>

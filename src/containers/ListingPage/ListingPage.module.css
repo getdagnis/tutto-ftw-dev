@@ -200,12 +200,12 @@
   }
 
   @media (--viewportLarge) {
-    max-width: 1128px;
+    /* max-width: 1128px; */
     padding: 0 36px;
     margin: 0 auto 117px;
   }
 
-  @media (--viewportXLarge) {
+  @media (--viewportXXLarge) {
     max-width: 1056px;
     padding: 0;
   }

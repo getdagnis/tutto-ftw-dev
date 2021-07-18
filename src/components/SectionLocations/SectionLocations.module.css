@@ -1,5 +1,9 @@
 @import '../../styles/propertySets.css';
 
+.root {
+  margin: auto;
+}
+
 .title {
   @apply --marketplaceH1FontStyles;
 
@@ -7,20 +11,40 @@
   margin-bottom: 0;
 }
 
+.subtitle {
+  @apply --marketplaceH3FontStyles;
+
+  margin-top: 0;
+  color: var(--marketplaceColor);
+}
+
 .locations {
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-gap: 12px;
   margin-top: 0px;
 
+  @media (--viewportSmall) {
+    grid-template-columns: 1fr 1fr;
+    margin-top: 0;
+  }
+
   @media (--viewportMedium) {
-    flex-direction: row;
-    margin-top: 33px;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  @media (--viewportLarge) {
+    grid-gap: 16px;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+
+  @media (--viewportXLarge) {
+    grid-gap: 24px;
   }
 }
 
 .location {
   width: 100%;
-  margin-top: 25px;
 
   /* Remove link's hover effect */
   &:hover {
@@ -61,9 +85,15 @@
 /* An image wrapper that defines the images aspect ratio */
 .aspectWrapper {
   padding-bottom: calc(6 / 13 * 100%); /* 13:6 Aspect Ratio */
+  min-height: 180px;
 
   @media (--viewportMedium) {
     padding-bottom: calc(2 / 3 * 100%); /* 3:2 Aspect Ratio */
+    min-height: 230px;
+  }
+
+  @media (--viewportLarge) {
+    min-height: 180px;
   }
 }
 
@@ -81,16 +111,16 @@
 }
 
 .linkText {
-  @apply --marketplaceH2FontStyles;
+  @apply --marketplaceH3FontStyles;
   color: var(--matterColor);
-  margin-top: 15px;
-  margin-bottom: 0;
+  margin-top: 8px;
+  margin-bottom: 8px;
 
   @media (--viewportMedium) {
-    margin-top: 21px;
+    margin-top: 8px;
   }
 }
 
 .locationName {
-  color: var(--marketplaceColor);
+  color: var(--matterColor);
 }

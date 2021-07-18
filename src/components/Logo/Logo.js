@@ -4,7 +4,7 @@ import classNames from 'classnames';
 
 import config from '../../config';
 import IconLogo from './IconLogo';
-import LogoImage from './saunatime-logo.png';
+import LogoImage from './tutto_logo_4.svg';
 import css from './Logo.module.css';
 
 const Logo = props => {

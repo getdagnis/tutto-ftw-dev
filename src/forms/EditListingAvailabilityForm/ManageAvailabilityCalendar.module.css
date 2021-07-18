@@ -386,7 +386,7 @@
   }
 }
 
-@media (--viewportXLarge) {
+@media (--viewportXXLarge) {
   .root {
     & :global(.CalendarMonth_caption) {
       margin-left: 108px;
