@@ -67,7 +67,10 @@ const TopbarMobileMenu = props => {
       <NotificationBadge className={css.notificationBadge} count={notificationCount} />
     ) : null;
 
-  const displayName = user.attributes.profile.firstName;
+  let displayName = user.attributes.profile.firstName;
+  // TODO: the rule below should work only if the language is set to Latvian
+  displayName && displayName.slice(-1) === 's' ? (displayName = displayName.slice(0, -1)) : null;
+
   const currentPageClass = page => {
     const isAccountSettingsPage =
       page === 'AccountSettingsPage' && ACCOUNT_SETTINGS_PAGES.includes(currentPage);

@@ -40,6 +40,28 @@
     }
   }
 
+  --fourColumnGrid: {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 12px;
+    @media (--viewportSmall) {
+      grid-template-columns: 1fr 1fr;
+    }
+
+    @media (--viewportMedium) {
+      grid-template-columns: 1fr 1fr;
+    }
+
+    @media (--viewportLarge) {
+      grid-gap: 12px;
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+
+    @media (--viewportXLarge) {
+      grid-gap: 12px;
+    }
+  }
+
   /**
    * Usage example: .root { @apply --marketplaceDefaultFontStyles; }
    */
@@ -89,20 +111,14 @@
 
   --marketplaceHeroTitleFontStyles: {
     font-weight: var(--fontWeightSemiBold);
-    font-size: 24px;
-    line-height: 30px;
+    font-size: 22px;
+    line-height: 1.2;
     letter-spacing: -0.7px;
     /* margin-top + n * line-height + margin-bottom => x * 6px */
-    margin-top: 25px;
-    margin-bottom: 14px;
 
     @media (--viewportMedium) {
-      font-size: 32px;
-      line-height: 36px;
+      font-size: 26px;
       letter-spacing: -1px;
-      /* margin-top + n * line-height + margin-bottom => x * 8px */
-      margin-top: 25px;
-      margin-bottom: 23px;
     }
   }
 
@@ -153,86 +169,83 @@
 
   --marketplaceH1FontStyles: {
     font-weight: var(--fontWeightSemiBold);
-    font-size: 24px;
-    line-height: 30px;
+    font-size: 20px;
+    line-height: 1.2;
     letter-spacing: -0.5px;
     /* margin-top + n * line-height + margin-bottom => x * 6px */
-    margin-top: 18px;
-    margin-bottom: 18px;
+    margin-top: 16px;
+    margin-bottom: 8px;
 
     @media (--viewportMedium) {
-      font-size: 40px;
+      font-size: 28px;
       font-weight: var(--fontWeightSemiBold);
-      line-height: 48px;
       letter-spacing: -1px;
       /* margin-top + n * line-height + margin-bottom => x * 8px */
       margin-top: 24px;
-      margin-bottom: 24px;
+      margin-bottom: 12px;
     }
   }
 
   --marketplaceH2FontStyles: {
     font-weight: var(--fontWeightSemiBold);
-    font-size: 21px;
-    line-height: 24px;
+    font-size: 18px;
+    line-height: 1.2;
     /* margin-top + n * line-height + margin-bottom => x * 6px */
-    margin-top: 21px;
-    margin-bottom: 17px;
+    margin-top: 16px;
+    margin-bottom: 8px;
 
     @media (--viewportMedium) {
-      line-height: 32px;
       /* margin-top + n * line-height + margin-bottom => x * 8px */
-      margin-top: 21px;
-      margin-bottom: 19px;
+      margin-top: 24px;
+      margin-bottom: 12px;
     }
   }
 
   --marketplaceH3FontStyles: {
     font-weight: var(--fontWeightSemiBold);
-    font-size: 18px;
-    line-height: 24px;
+    font-size: 16px;
+    line-height: 1.2;
     /* margin-top + n * line-height + margin-bottom => x * 6px */
     margin-top: 16px;
-    margin-bottom: 14px;
+    margin-bottom: 8px;
 
     @media (--viewportMedium) {
       /* margin-top + n * line-height + margin-bottom => x * 8px */
-      margin-top: 16px;
-      margin-bottom: 16px;
+      margin-top: 24px;
+      margin-bottom: 12px;
     }
   }
 
   --marketplaceH4FontStyles: {
     font-weight: var(--fontWeightMedium);
     font-size: 15px;
-    line-height: 24px;
+    line-height: 1.2;
     letter-spacing: 0;
     /* margin-top + n * line-height + margin-bottom => x * 6px */
     margin-top: 12px;
-    margin-bottom: 12px;
+    margin-bottom: 8px;
 
     @media (--viewportMedium) {
       font-weight: var(--fontWeightMedium);
       /* margin-top + n * line-height + margin-bottom => x * 8px */
-      margin-top: 17px;
-      margin-bottom: 15px;
+      margin-top: 16px;
+      margin-bottom: 8px;
     }
   }
 
   --marketplaceH5FontStyles: {
     font-weight: var(--fontWeightMedium);
     font-size: 14px;
-    line-height: 18px;
+    line-height: 1.2;
     letter-spacing: 0;
     /* margin-top + n * line-height + margin-bottom => x * 6px */
     margin-top: 10px;
     margin-bottom: 8px;
 
     @media (--viewportMedium) {
-      line-height: 16px;
       /* margin-top + n * line-height + margin-bottom => x * 8px */
-      margin-top: 10px;
-      margin-bottom: 14px;
+      margin-top: 12px;
+      margin-bottom: 8px;
     }
   }
 

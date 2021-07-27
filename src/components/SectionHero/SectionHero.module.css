@@ -28,33 +28,73 @@
 }
 
 .root {
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-gap: 12px;
   width: 100%;
   height: 100%;
-
-  /* Text positioning is done with paddings */
-}
-
-.heroContent {
-  border: 5px solid var(--marketplaceColor);
-  border-radius: 4px;
-  box-sizing: border-box;
-  padding: 16px 24px;
+  margin: 24px 0 12px;
 
   @media (--viewportMedium) {
-    padding: 16px 24px;
+    grid-template-columns: 1fr 1fr;
   }
 
   @media (--viewportLarge) {
-    padding: 24px 32px;
+    grid-gap: 16px;
+  }
+
+  @media (--viewportXLarge) {
+    grid-gap: 24px;
   }
 }
 
-.heroMainTitle {
+.heroContent {
+  position: relative;
+  display: flex;
+  border: 4px solid var(--marketplaceColor);
+  border-radius: 4px;
+  box-sizing: border-box;
+  padding: 12px 18px;
+  width: 100%;
+  height: 100%;
+  transition: all 0.1s ease;
+  cursor: pointer;
+
+  @media (--viewportMedium) {
+    border: 5px solid var(--marketplaceColor);
+    padding: 14px 20px;
+  }
+
+  @media (--viewportLarge) {
+    padding: 18px 26px;
+  }
+
+  &:hover {
+    border-color: var(--matterColor);
+    transition: all 0.3s ease;
+    transform: scale(1.01);
+    box-shadow: var(--boxShadowSectionLocationHover);
+  }
+
+  &:active {
+    transform: translate(0, 0);
+    box-shadow: none;
+  }
+
+  &:hover > .heroMainTitle,
+  &:hover > .heroSubTitle {
+    color: var(--matterColor);
+    transition: color 0.3s ease;
+  }
+}
+
+.heroMainTitle,
+.heroSubTitle {
   @apply --marketplaceHeroTitleFontStyles;
   color: var(--marketplaceColor);
-  margin: 0 auto;
+  margin: 0;
+  display: flex;
+  align-items: center;
 
   composes: animation;
   animation-delay: 0.5s;
@@ -65,17 +105,19 @@
 }
 
 .heroSubTitle {
-  @apply --marketplaceH4FontStyles;
+  animation-delay: 0.75s;
+}
 
-  color: var(--matterColorAnti);
-  text-align: center;
-  margin: 12px auto 0;
+.icon {
+  margin-right: 16px;
+  width: 55px;
+}
 
-  composes: animation;
-  animation-delay: 0.65s;
+.heroLink {
+  text-decoration: none;
 
-  @media (--viewportMedium) {
-    max-width: var(--SectionHero_desktopTitleMaxWidth);
+  &:hover {
+    text-decoration: none;
   }
 }
 

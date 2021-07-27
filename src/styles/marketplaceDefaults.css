@@ -19,23 +19,25 @@
 
   --marketplaceColor: #6fbe44;
   --marketplaceColorLight: #9ad37b;
-  --marketplaceColorDark: #4d852e;
+  --marketplaceColorDark: #349c1f;
 
   /* Used with inline CSS SVGs */
   --marketplaceColorEncoded: %23c0392b;
 
-  --successColor: #2ecc71;
-  --successColorDark: #239954;
+  --successColor: #6fbe44;
+  --successColorDark: #349c1f;
   --successColorLight: #f0fff6;
-  --failColor: #ff0000;
+  --failColor: #ff5100;
   --failColorLight: #fff0f0;
-  --attentionColor: #ffaa00;
+  --attentionColor: #6fbe44;
   --attentionColorLight: #fff7f0;
   --bannedColorLight: var(--marketplaceColorLight);
   --bannedColorDark: var(--marketplaceColor);
 
   --matterColorDark: #000000;
-  --matterColor: #4a4a4a;
+  --matterColorGray: #777;
+  --matterColor: #405f42;
+  --matterColorGreenLight: rgb(189, 197, 184);
   --matterColorAnti: #b2b2b2;
   --matterColorNegative: #e7e7e7;
   --matterColorBright: #fcfcfc;
@@ -69,7 +71,7 @@
   --boxShadowButton: 0 4px 8px 0 rgba(0, 0, 0, 0.1);
   --boxShadowListingCard: 0 0 50px 0 rgba(0, 0, 0, 0.1);
   --boxShadowNotFoundPageSearch: 0 2px 4px 0 rgba(0, 0, 0, 0.5);
-  --boxShadowSectionLocationHover: 0 10px 30px 0 rgba(0, 0, 0, 0.1);
+  --boxShadowSectionLocationHover: 5px 5px 10px 0 rgba(119, 119, 119, 0.3);
   --boxShadowBottomForm: 0 -2px 4px 0 rgba(0, 0, 0, 0.05);
   --boxShadowFilterButton: 0 4px 16px 0 rgba(0, 0, 0, 0.2);
 
@@ -91,8 +93,8 @@
 
   /* ================ Transition styles ================ */
 
-  --transitionStyle: ease-in 0.2s;
-  --transitionStyleButton: ease-in-out 0.1s;
+  --transitionStyle: all ease-in 0.3s;
+  --transitionStyleButton: all ease-in-out 0.3s;
 
   /* ================ Topbar related ================ */
 

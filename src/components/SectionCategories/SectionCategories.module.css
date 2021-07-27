@@ -1,0 +1,137 @@
+@import '../../styles/propertySets.css';
+
+.root {
+  margin: 0;
+}
+
+.title {
+  @apply --marketplaceH4FontStyles;
+
+  margin: 12px 0;
+  font-size: 16px;
+  color: var(--matterColorGreenLight);
+
+  @media (--viewportLarge) and (max-width: 1280px) {
+    margin-bottom: 16px;
+  }
+}
+
+.icon {
+  display: block;
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  transition: transform 0.3s ease;
+
+  @media (--viewportMedium) {
+    top: 20px;
+    right: 16px;
+  }
+
+  @media (--viewportLarge) and (max-width: 1280px) {
+    top: -8px;
+    height: 28px;
+  }
+
+  @media (min-width: 1380px) {
+    width: 55px;
+  }
+}
+
+.categoryList {
+  @apply --fourColumnGrid;
+
+  margin: 0 -16px;
+}
+
+.categoryMain {
+  @apply --marketplaceH2FontStyles;
+
+  position: relative;
+  color: var(--matterColorGreen);
+  background-color: rgb(244, 250, 240);
+  border-radius: 6px;
+  padding: 16px 16px 12px;
+  transform: scale(0.99);
+  transition: all 0.2s ease;
+  margin: 0;
+
+  &:hover {
+    transform: scale(1.04);
+    box-shadow: var(--boxShadowLight);
+  }
+
+  @media (--viewportLarge) and (max-width: 1280px) {
+    padding-top: 24px;
+  }
+
+  @media (--viewportXLarge) {
+    &:hover > .icon {
+      transform: scale(1.15);
+    }
+  }
+}
+
+.subcategoryList {
+  @apply --marketplaceH4FontStyles;
+
+  margin-top: 4px;
+  line-height: 1.4;
+}
+
+.categorySub {
+  cursor: pointer;
+
+  &:hover {
+    color: var(--marketplaceColor);
+    text-decoration: underline;
+  }
+}
+/* 
+.categoryMain {
+  @apply --marketplaceH3FontStyles;
+
+  position: relative;
+  padding: 12px 8px;
+  margin: 0;
+  border: 1px solid #eee;
+  border-radius: 6px;
+  transition: all 0.3s ease;
+  cursor: pointer;
+
+  &:hover {
+    color: white;
+    background-color: var(--matterColor);
+    z-index: 500;
+  }
+
+  &:hover > .subcategoryList {
+    display: block;
+  }
+
+  @media (--viewportMedium) {
+    padding: 12px;
+  }
+}
+
+.subcategoryList {
+  position: absolute;
+  top: 32px;
+  display: none;
+  padding: 10px 16px;
+  color: var(--matterColor);
+  background: rgba(255, 255, 255, 0.95);
+  box-shadow: var(--boxShadowButton);
+  border-radius: 3px;
+  z-index: 200;
+}
+
+.categorySub {
+  @apply --marketplaceH3FontStyles;
+  margin: 8px 0;
+  line-height: 1.2;
+
+  &:hover {
+    color: var(--marketplaceColor);
+  }
+} */

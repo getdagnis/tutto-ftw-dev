@@ -5,42 +5,22 @@
 }
 
 .title {
-  @apply --marketplaceH1FontStyles;
+  @apply --marketplaceH2FontStyles;
 
-  margin-top: 0;
-  margin-bottom: 0;
+  margin: 12px 0;
 }
 
 .subtitle {
   @apply --marketplaceH3FontStyles;
 
   margin-top: 0;
-  color: var(--marketplaceColor);
+  color: var(--matterColor);
 }
 
 .locations {
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-gap: 12px;
-  margin-top: 0px;
+  @apply --fourColumnGrid;
 
-  @media (--viewportSmall) {
-    grid-template-columns: 1fr 1fr;
-    margin-top: 0;
-  }
-
-  @media (--viewportMedium) {
-    grid-template-columns: 1fr 1fr;
-  }
-
-  @media (--viewportLarge) {
-    grid-gap: 16px;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-  }
-
-  @media (--viewportXLarge) {
-    grid-gap: 24px;
-  }
+  margin-top: 0;
 }
 
 .location {
@@ -73,12 +53,16 @@
 .imageWrapper {
   position: relative;
   width: 100%;
-  border-radius: 4px;
-  transition: var(--transitionStyleButton);
+  border-radius: 3px;
+  transition: all 0.2s ease;
 
   &:hover {
-    transform: scale(1.02);
     box-shadow: var(--boxShadowSectionLocationHover);
+    transform: scale(1.01);
+  }
+
+  &:hover + .linkText > span > span {
+    color: var(--marketplaceColor);
   }
 }
 
@@ -111,7 +95,7 @@
 }
 
 .linkText {
-  @apply --marketplaceH3FontStyles;
+  @apply --marketplaceH2FontStyles;
   color: var(--matterColor);
   margin-top: 8px;
   margin-bottom: 8px;
